@@ -1,6 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import animationData from "../../../public/Unlocked.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function PadlockAnimation() {
   return (
@@ -22,107 +26,19 @@ export default function PadlockAnimation() {
         className="absolute inset-8 rounded-full border border-[#C9A84C]/20"
       />
 
-      {/* Padlock SVG */}
+      {/* Lottie Animation */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 200 }}
-        className="relative z-10"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 100 }}
+        className="relative z-10 w-full h-full flex items-center justify-center"
       >
-        <svg
-          width="140"
-          height="160"
-          viewBox="0 0 140 160"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Shackle (the arch part) */}
-          <motion.path
-            d="M42 70 L42 40 Q42 15 70 15 Q98 15 98 40 L98 70"
-            stroke="#C9A84C"
-            strokeWidth="12"
-            strokeLinecap="round"
-            fill="none"
-            variants={{
-              locked: { d: "M42 70 L42 40 Q42 15 70 15 Q98 15 98 40 L98 70" },
-              unlocked: {
-                d: "M42 70 L42 22 Q42 -10 70 -10 Q98 -10 98 22 L98 50",
-              },
-            }}
-            initial="locked"
-            animate="unlocked"
-            transition={{ delay: 0.8, duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
-          />
-
-          {/* Lock body */}
-          <motion.rect
-            x="20"
-            y="68"
-            width="100"
-            height="80"
-            rx="12"
-            fill="#112952"
-            stroke="#C9A84C"
-            strokeWidth="3"
-            initial={{ y: 80, opacity: 0 }}
-            animate={{ y: 68, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          />
-
-          {/* Body highlight */}
-          <motion.rect
-            x="20"
-            y="68"
-            width="100"
-            height="30"
-            rx="12"
-            fill="#C9A84C"
-            fillOpacity="0.1"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          />
-
-          {/* Keyhole outer circle */}
-          <motion.circle
-            cx="70"
-            cy="108"
-            r="16"
-            fill="#0B1F3A"
-            stroke="#C9A84C"
-            strokeWidth="2.5"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.4, type: "spring" }}
-          />
-
-          {/* Keyhole shape */}
-          <motion.path
-            d="M70 96 L70 120 M62 114 L78 114"
-            stroke="#C9A84C"
-            strokeWidth="4"
-            strokeLinecap="round"
-            initial={{ opacity: 0, rotate: 0 }}
-            animate={{ opacity: 1, rotate: 90 }}
-            transition={{ delay: 0.8, duration: 0.5, ease: "backOut" }}
-            style={{ transformOrigin: "70px 108px" }}
-          />
-
-          {/* Decorative dots */}
-          {[0, 1, 2].map((i) => (
-            <motion.circle
-              key={i}
-              cx={35 + i * 35}
-              cy="138"
-              r="3"
-              fill="#C9A84C"
-              fillOpacity="0.4"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.9 + i * 0.1 }}
-            />
-          ))}
-        </svg>
+        <Lottie
+          animationData={animationData}
+          loop={true}
+          autoplay={true}
+          className="w-full h-full max-w-[200px] max-h-[200px]"
+        />
       </motion.div>
 
       {/* Orbiting particles */}

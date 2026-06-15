@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { Phone, MessageCircle } from "lucide-react";
 import PadlockAnimation from "@/components/ui/PadlockAnimation";
+import { Typewriter } from "react-simple-typewriter";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -70,27 +71,18 @@ export default function HeroSection() {
             >
               İstanbul&apos;da
             </motion.h1>
-            <motion.div variants={itemVariants} className="mb-4 overflow-hidden">
-              <div className="flex flex-wrap gap-2">
-                {words.map((word, i) => (
-                  <motion.span
-                    key={word}
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{
-                      delay: 0.5 + i * 0.15,
-                      duration: 0.6,
-                      ease: "easeOut",
-                    }}
-                    className="inline-block font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-[#C9A84C]"
-                  >
-                    {word}
-                    {i < words.length - 1 && (
-                      <span className="text-white/40 mx-1">·</span>
-                    )}
-                  </motion.span>
-                ))}
-              </div>
+            <motion.div variants={itemVariants} className="mb-2">
+              <span className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-[#C9A84C]">
+                <Typewriter
+                  words={["Güvenilir", "Hızlı", "Profesyonel"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1500}
+                />
+              </span>
             </motion.div>
             <motion.h1
               variants={itemVariants}
