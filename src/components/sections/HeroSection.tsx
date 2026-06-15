@@ -1,8 +1,9 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Link from "next/link";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone} from "lucide-react";
 import PadlockAnimation from "@/components/ui/PadlockAnimation";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -121,7 +122,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 bg-transparent hover:bg-green-600/10 text-white border-2 border-green-500 hover:border-green-400 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
               >
-                <MessageCircle className="w-5 h-5 text-green-400" />
+                <WhatsAppIcon className="w-5 h-5 text-green-400" />
                 <span>WhatsApp ile Yaz</span>
               </a>
             </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -177,7 +178,7 @@ export default function Header() {
                 className="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors duration-200"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5 text-white" />
+                <WhatsAppIcon className="w-5 h-5 text-white" />
               </a>
               <a
                 href="tel:+905313145760"
@@ -297,7 +298,7 @@ export default function Header() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-lg w-full transition-colors"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     WhatsApp
                   </a>
                 </div>

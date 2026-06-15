@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Link from "next/link";
 import { Phone, MessageCircle, MapPin, Users, Clock, Map } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
@@ -67,7 +68,7 @@ export default function HomePage() {
               className="flex items-center justify-center gap-3 py-3 hover:bg-[#0B1F3A]/10 rounded-lg transition-colors group border-x border-[#0B1F3A]/10"
             >
               <div className="w-10 h-10 bg-[#0B1F3A]/15 group-hover:bg-[#0B1F3A]/25 rounded-full flex items-center justify-center transition-colors">
-                <MessageCircle className="w-5 h-5 text-[#0B1F3A]" />
+                <WhatsAppIcon className="w-5 h-5 text-[#0B1F3A]" />
               </div>
               <div>
                 <p className="text-[#0B1F3A]/70 text-xs font-oswald uppercase tracking-wider">

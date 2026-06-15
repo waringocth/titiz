@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { motion, useInView } from "framer-motion";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone} from "lucide-react";
 
 export default function CtaBanner() {
   const ref = useRef<HTMLDivElement>(null);
@@ -78,7 +79,7 @@ export default function CtaBanner() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-[#0B1F3A] font-bold px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-0.5"
           >
-            <MessageCircle className="w-5 h-5 text-green-600" />
+            <WhatsAppIcon className="w-5 h-5 text-green-600" />
             WhatsApp
           </a>
         </motion.div>

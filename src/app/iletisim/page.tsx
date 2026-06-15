@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Link from "next/link";
 import { Phone, MessageCircle, Clock, MapPin } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
@@ -125,7 +126,7 @@ export default function IletisimPage() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-green-600/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-5 h-5 text-green-400" />
+                      <WhatsAppIcon className="w-5 h-5 text-green-400" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-xs mb-1">WhatsApp</p>
@@ -185,7 +186,7 @@ export default function IletisimPage() {
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition-colors"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     WhatsApp
                   </a>
                 </div>

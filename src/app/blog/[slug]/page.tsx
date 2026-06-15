@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -190,7 +191,7 @@ export default async function BlogDetayPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition-colors"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     WhatsApp
                   </a>
                 </div>

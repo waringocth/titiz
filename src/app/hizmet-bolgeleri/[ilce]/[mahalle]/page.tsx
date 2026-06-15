@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -131,12 +132,61 @@ export default async function MahallePage({ params }: Props) {
             {mah.title} Çilingir{" "}
             <span className="text-[#C9A84C]">— Titiz Çilingir</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+          <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
             {mah.title}&apos;nde kapı açma, kilit değişimi, oto çilingir ve
             acil çilingir hizmetleri için 7/24 hizmetinizdeyiz.{" "}
             <strong className="text-white">15-20 dakikada</strong>{" "}
             {mah.title}&apos;ne ulaşıyoruz.
           </p>
+
+          {/* Mobile Contact Card in Hero */}
+          <div className="block lg:hidden">
+            <div className="bg-[#112952] rounded-2xl p-6 border border-[#C9A84C]/20 shadow-xl">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-green-400 text-xs font-oswald uppercase tracking-wider">
+                  7/24 Aktif
+                </span>
+              </div>
+              <h3 className="font-playfair font-bold text-lg text-white mb-1">
+                {mah.title}
+              </h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Acil çilingir hizmetinde buradayız!
+              </p>
+              <p className="text-[#C9A84C] font-bold text-xl mb-4">
+                0531 314 57 60
+              </p>
+              <div className="space-y-3">
+                <a
+                  href="tel:+905313145760"
+                  className="flex items-center justify-center gap-2 bg-[#C9A84C] hover:bg-[#E8C96A] text-[#0B1F3A] font-bold py-3 rounded-xl transition-colors w-full"
+                >
+                  <Phone className="w-4 h-4" />
+                  Hemen Ara
+                </a>
+                <a
+                  href="https://wa.me/905313145760"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition-colors w-full"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
+                  WhatsApp
+                </a>
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-center">
+                <div>
+                  <p className="font-bold text-[#C9A84C]">15-20 dk</p>
+                  <p className="text-xs text-gray-500">Varış Süresi</p>
+                </div>
+                <div>
+                  <p className="font-bold text-[#C9A84C]">7/24</p>
+                  <p className="text-xs text-gray-500">Hizmet</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -144,7 +194,7 @@ export default async function MahallePage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="lg:col-span-2 space-y-8 order-2 lg:order-1">
               {/* Service description */}
               <div className="bg-white rounded-2xl p-8 border border-gray-100">
                 <h2 className="font-playfair font-bold text-2xl text-[#0B1F3A] mb-4">
@@ -218,12 +268,38 @@ export default async function MahallePage({ params }: Props) {
                   ))}
                 </div>
               </div>
+
+              {/* SEO Extended Text */}
+              <div className="bg-white rounded-2xl p-8 border border-gray-100">
+                <h2 className="font-playfair font-bold text-2xl text-[#0B1F3A] mb-4">
+                  {mah.title} Acil Çilingir & Anahtarcı Hizmeti
+                </h2>
+                <div className="space-y-4 text-gray-600 leading-relaxed text-sm">
+                  <p>
+                    <strong>{mah.title} çilingir</strong> ihtiyaçlarınızda zamanın ne kadar önemli olduğunu biliyoruz. Kapıda kalmak veya kilit sistemlerinizde arıza yaşamak stresli bir durumdur. Bu yüzden Titiz Çilingir olarak, {mah.title} bölgesine günün 24 saati kesintisiz hizmet sunarak, mağduriyetinizi en kısa sürede çözüme kavuşturuyoruz. Gelişmiş ekipmanlarımızla kapınıza zarar vermeden, tamamen güvenli bir şekilde kilit açma işlemlerini gerçekleştiriyoruz.
+                  </p>
+                  <p>
+                    Sadece ev kapıları değil, <strong>{mah.title} oto çilingir</strong>, çelik kasa açma, hidrolik kapı yayı montajı ve göbek (baza) değişimi gibi kapsamlı hizmetlerimiz mevcuttur. Aracınızın anahtarı içinde kaldığında ya da kilitli kasanızın şifresini unuttuğunuzda, uzman ekibimiz en yeni teknikleri kullanarak size yardımcı olur. {bolge.title} ve çevresindeki tüm noktalara maksimum 15-20 dakika içinde ulaşıyoruz.
+                  </p>
+                  <h3 className="font-bold text-[#0B1F3A] text-lg mt-4 mb-2">Neden Titiz Çilingir&apos;i Tercih Etmelisiniz?</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>7/24 Kesintisiz Hizmet:</strong> Gece yarısı veya resmi tatil fark etmeksizin bize ulaşabilirsiniz.</li>
+                    <li><strong>Hasarsız İşlem Garantisi:</strong> Kapınıza, kilidinize veya aracınıza kesinlikle zarar vermeden profesyonelce çalışıyoruz.</li>
+                    <li><strong>Hızlı Ulaşım:</strong> {mah.title} lokasyonunda mobil ekiplerimiz sayesinde dakikalar içinde yanınızdayız.</li>
+                    <li><strong>Uygun Fiyatlar:</strong> Sektördeki en kaliteli hizmeti en uygun fiyat politikasıyla sizlere sunuyoruz.</li>
+                  </ul>
+                  <p>
+                    {mah.title} bölgesinde güvenilir bir çilingir arıyorsanız, iletişim numaramızdan veya WhatsApp hattımızdan bize 7/24 ulaşabilirsiniz. Kilit değişiminden akıllı kilit sistemleri kurulumuna kadar tüm güvenlik ihtiyaçlarınız için profesyonel çözümler üretiyoruz.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 order-1 lg:order-2 mb-8 lg:mb-0">
               <div className="sticky top-24 space-y-4">
-                <div className="bg-[#0B1F3A] rounded-2xl p-6 border border-[#C9A84C]/20">
+                {/* Desktop Contact Card */}
+                <div className="hidden lg:block bg-[#0B1F3A] rounded-2xl p-6 border border-[#C9A84C]/20">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                     <span className="text-green-400 text-xs font-oswald uppercase tracking-wider">
@@ -253,7 +329,7 @@ export default async function MahallePage({ params }: Props) {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition-colors w-full"
                     >
-                      <MessageCircle className="w-4 h-4" />
+                      <WhatsAppIcon className="w-4 h-4" />
                       WhatsApp
                     </a>
                   </div>

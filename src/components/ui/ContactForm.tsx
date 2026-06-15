@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { useState } from "react";
 import { Phone, MessageCircle, Clock, MapPin, CheckCircle } from "lucide-react";
 import { bolgeler } from "@/data/bolgeler";

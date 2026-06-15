@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, Phone, MessageCircle, ChevronRight, ArrowRight } from "lucide-react";
@@ -90,7 +91,7 @@ export default async function IlcePage({ params }: Props) {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-xl transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4" />
                   WhatsApp
                 </a>
               </div>
@@ -127,6 +128,31 @@ export default async function IlcePage({ params }: Props) {
                   </Link>
                 ))}
               </div>
+
+              {/* SEO Extended Text */}
+              <div className="bg-white rounded-2xl p-8 border border-gray-100 mt-8">
+                <h2 className="font-playfair font-bold text-2xl text-[#0B1F3A] mb-4">
+                  {bolge.title} Acil Çilingir ve Anahtarcı Hizmetleri
+                </h2>
+                <div className="space-y-4 text-gray-600 leading-relaxed text-sm">
+                  <p>
+                    <strong>{bolge.title} çilingir</strong> ihtiyacınız olduğunda, bölgenin her noktasına hakim, hızlı ve güvenilir bir ekibe ulaşmak istersiniz. Titiz Çilingir olarak, {bolge.title} sınırları içerisindeki tüm mahallelere ve semtlere 7 gün 24 saat kesintisiz acil çilingir desteği sunuyoruz. Kapıda kalmanız, kilidinizin bozulması veya anahtarınızı kaybetmeniz durumunda, profesyonel ekipmanlarımızla kapınıza zarar vermeden kilit açma işlemini gerçekleştiriyoruz.
+                  </p>
+                  <p>
+                    Hizmetlerimiz sadece ev kapıları ile sınırlı değildir. <strong>{bolge.title} oto çilingir</strong>, çelik kasa açma, yüksek güvenlikli akıllı kilit montajı, kapı hidrolik yayı takılması ve bina giriş kapısı çözümleri gibi çok geniş bir yelpazede hizmet sunmaktayız. {bolge.title} ve çevresine sadece 15-20 dakika içinde ulaşıyor, sorununuzu kalıcı ve uygun maliyetli bir şekilde çözüyoruz.
+                  </p>
+                  <h3 className="font-bold text-[#0B1F3A] text-lg mt-4 mb-2">Neden Bizi Tercih Etmelisiniz?</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Hızlı Servis:</strong> {bolge.title} ilçesinde bölgeye hakim mobil araçlarımızla en kısa sürede yanınızdayız.</li>
+                    <li><strong>7/24 Aktif Destek:</strong> Gecenin bir yarısı veya hafta sonu demeden, çilingir ihtiyacınızda bize ulaşabilirsiniz.</li>
+                    <li><strong>Hasarsız Müdahale:</strong> Kapılarınıza ve kilit mekanizmalarınıza zarar vermeden sadece profesyonel tekniklerle açım yapıyoruz.</li>
+                    <li><strong>Garantili ve Uygun Fiyat:</strong> {bolge.title} bölgesinde en rekabetçi ve uygun fiyat garantisini sunuyoruz.</li>
+                  </ul>
+                  <p>
+                    {bolge.title} bölgesindeki tüm güvenlik sorunlarınız için iletişim numaramızdan veya WhatsApp üzerinden bize anında ulaşabilirsiniz. Profesyonel ekibimiz size en yakın çilingir servisini anında yönlendirecektir.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Sidebar Contact */}
@@ -159,7 +185,7 @@ export default async function IlcePage({ params }: Props) {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition-colors w-full"
                     >
-                      <MessageCircle className="w-4 h-4" />
+                      <WhatsAppIcon className="w-4 h-4" />
                       WhatsApp
                     </a>
                   </div>

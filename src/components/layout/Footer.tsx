@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { KeyRound, Phone, MessageCircle, Clock, MapPin } from "lucide-react";
 import { hizmetler } from "@/data/hizmetler";
 import { bolgeler } from "@/data/bolgeler";
@@ -47,7 +48,7 @@ export default function Footer() {
                 className="w-10 h-10 bg-green-600/20 hover:bg-green-600/40 border border-green-600/30 rounded-lg flex items-center justify-center transition-colors duration-200"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4 text-green-400" />
+                <WhatsAppIcon className="w-4 h-4 text-green-400" />
               </a>
             </div>
           </div>
@@ -138,7 +139,7 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-3">
-                <MessageCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                <WhatsAppIcon className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-500 mb-1">WhatsApp</p>
                   <a

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -201,7 +202,7 @@ export default async function HizmetDetayPage({ params }: Props) {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 px-6 rounded-xl transition-colors w-full"
                     >
-                      <MessageCircle className="w-5 h-5" />
+                      <WhatsAppIcon className="w-5 h-5" />
                       WhatsApp ile Yaz
                     </a>
                   </div>
