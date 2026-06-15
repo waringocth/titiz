@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ===== Design Tokens (Tailwind v4 CSS-based config) ===== */
+@theme {
+  /* Colors */
+  --color-navy: #0b1f3a;
+  --color-navy-mid: #112952;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-off-white: #f5f3ee;
+  --color-gray-custom: #6b7280;
+  --color-gray-light: #e5e7eb;
+
+  /* Fonts */
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+
+  /* Animations */
+  --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scroll-left: scroll-left 40s linear infinite;
+
+  /* Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+}
+
+/* ===== Base Styles ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), "Inter", sans-serif;
+  background-color: #0b1f3a;
+  color: white;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Font Class Utilities ===== */
+.font-playfair {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+.font-oswald {
+  font-family: var(--font-oswald), "Oswald", sans-serif;
+}
+
+/* ===== Color Utilities ===== */
+.text-navy { color: #0b1f3a; }
+.text-navy-mid { color: #112952; }
+.text-gold { color: #c9a84c; }
+.text-gold-light { color: #e8c96a; }
+.bg-navy { background-color: #0b1f3a; }
+.bg-navy-mid { background-color: #112952; }
+.bg-gold { background-color: #c9a84c; }
+.bg-gold-light { background-color: #e8c96a; }
+.bg-off-white { background-color: #f5f3ee; }
+.border-gold { border-color: #c9a84c; }
+.border-navy { border-color: #0b1f3a; }
+
+/* ===== Grain texture overlay ===== */
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===== Glass card ===== */
+.glass-card {
+  background: rgba(17, 41, 82, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+/* ===== Gold gradient text ===== */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #c9a84c, #e8c96a, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0b1f3a; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+
+/* ===== Reading progress bar ===== */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c9a84c, #e8c96a);
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* ===== Auto-scrolling testimonials ===== */
+.testimonial-track {
+  animation: scroll-left 40s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+/* ===== Gold particle effect ===== */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #c9a84c;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: float-particle linear infinite;
+}
+
+@keyframes float-particle {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* ===== Background color utilities ===== */
+.\[\#0B1F3A\] { background-color: #0b1f3a; }
+.\[\#112952\] { background-color: #112952; }
+.\[\#C9A84C\] { background-color: #c9a84c; }
+.\[\#E8C96A\] { background-color: #e8c96a; }
+.\[\#F5F3EE\] { background-color: #f5f3ee; }
