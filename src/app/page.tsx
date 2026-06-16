@@ -170,7 +170,7 @@ export default function HomePage() {
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={`${post.title} - İstanbul çilingir rehberi`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />

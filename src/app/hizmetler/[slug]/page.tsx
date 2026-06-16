@@ -71,8 +71,22 @@ export default async function HizmetDetayPage({ params }: Props) {
   const Icon = iconMap[hizmet.icon] || Lock;
   const otherServices = hizmetler.filter((h) => h.slug !== slug).slice(0, 4);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://titizcilingir.com" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://titizcilingir.com/hizmetler" },
+      { "@type": "ListItem", "position": 3, "name": hizmet.title, "item": `https://titizcilingir.com/hizmetler/${hizmet.slug}` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-28 pb-10 bg-[#0B1F3A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +110,7 @@ export default async function HizmetDetayPage({ params }: Props) {
               <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden mb-8">
                 <Image
                   src={hizmet.image}
-                  alt={hizmet.title}
+                  alt={`${hizmet.title} hizmeti - İstanbul profesyonel çilingir`}
                   fill
                   className="object-cover"
                   priority

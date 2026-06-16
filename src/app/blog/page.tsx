@@ -64,7 +64,7 @@ export default function BlogPage() {
                 <div className="relative h-64 md:h-auto min-h-[300px]">
                   <Image
                     src={featured.image}
-                    alt={featured.title}
+                    alt={`${featured.title} - Titiz Çilingir Rehberi`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -109,7 +109,7 @@ export default function BlogPage() {
                 <div className="relative h-48">
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={`${post.title} - Çilingir Blog`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />

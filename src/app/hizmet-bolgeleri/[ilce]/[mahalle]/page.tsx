@@ -99,11 +99,26 @@ export default async function MahallePage({ params }: Props) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://titizcilingir.com" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmet Bölgeleri", "item": "https://titizcilingir.com/hizmet-bolgeleri" },
+      { "@type": "ListItem", "position": 3, "name": `${bolge.title} Çilingir`, "item": `https://titizcilingir.com/hizmet-bolgeleri/${bolge.slug}` },
+      { "@type": "ListItem", "position": 4, "name": `${mah.title} Çilingir`, "item": `https://titizcilingir.com/hizmet-bolgeleri/${ilce}/${mahalle}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero */}

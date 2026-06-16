@@ -45,8 +45,22 @@ export default async function IlcePage({ params }: Props) {
   const bolge = bolgeler.find((b) => b.slug === ilce);
   if (!bolge) notFound();
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://titizcilingir.com" },
+      { "@type": "ListItem", "position": 2, "name": "Hizmet Bölgeleri", "item": "https://titizcilingir.com/hizmet-bolgeleri" },
+      { "@type": "ListItem", "position": 3, "name": `${bolge.title} Çilingir`, "item": `https://titizcilingir.com/hizmet-bolgeleri/${bolge.slug}` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-[#0B1F3A] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

@@ -42,6 +42,16 @@ export default async function BlogDetayPage({ params }: Props) {
 
   const otherPosts = blogPosts.filter((p) => p.slug !== slug);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://titizcilingir.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://titizcilingir.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://titizcilingir.com/blog/${post.slug}` },
+    ],
+  };
+
   // Simple markdown-like parser for the content
   const parseContent = (content: string) => {
     return content.split("\n").map((line, i) => {
@@ -92,6 +102,10 @@ export default async function BlogDetayPage({ params }: Props) {
   return (
     <>
       <ReadingProgress />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       {/* Hero */}
       <section className="pt-28 bg-[#0B1F3A]">
@@ -107,7 +121,7 @@ export default async function BlogDetayPage({ params }: Props) {
         <div className="relative h-72 sm:h-96">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={`${post.title} - Titiz Çilingir Blog`}
             fill
             className="object-cover"
             priority
@@ -211,7 +225,7 @@ export default async function BlogDetayPage({ params }: Props) {
                         <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                           <Image
                             src={p.image}
-                            alt={p.title}
+                            alt={`${p.title} - Titiz Çilingir Blog`}
                             fill
                             className="object-cover"
                           />
