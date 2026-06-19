@@ -6,8 +6,7 @@ export const blogPosts = [
       "Kapınız kilitli kaldığında paniğe kapılmadan yapabileceğiniz 5 adım.",
     date: "2025-01-15",
     readTime: "4 dk",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/images/blog-kapi.jpg",
     content: `Kapınızın kilitli kalması, günlük hayatın en stresli anlarından biridir. Özellikle geç saatlerde veya kötü hava koşullarında bu durumla karşılaşmak oldukça zor olabilir. Ancak paniklemeden doğru adımları izlediğinizde çok daha kolay çözüme ulaşabilirsiniz.
 
 ## 1. Sakin Olun ve Durumu Değerlendirin
@@ -46,8 +45,7 @@ Kapı kilitli kalması durumunda asla paniklemeyiniz. Titiz Çilingir ekibi her 
       "Mul-T-Lock, Kale ve Iseo başta olmak üzere en güvenli kilit markalarını karşılaştırdık.",
     date: "2025-02-03",
     readTime: "6 dk",
-    image:
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800&q=80",
+    image: "/images/blog-kilit.jpg",
     content: `Evinizin veya işyerinizin güvenliği, büyük ölçüde kapı kilidinizin kalitesine bağlıdır. 2025 yılında piyasadaki en güvenli kilit markalarını ve modellerini sizin için inceledik.
 
 ## Kilit Seçerken Dikkat Edilmesi Gereken Faktörler
@@ -105,8 +103,7 @@ Titiz Çilingir olarak tüm bu marka kilitleri temin edip kurulumunu yapabiliyor
       "Elektronik ve akıllı kilit sistemlerinin avantajları, dezavantajları ve kurulum süreci.",
     date: "2025-03-12",
     readTime: "5 dk",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+    image: "/images/blog-akilli-kilit.jpg",
     content: `Teknolojinin hızla geliştiği günümüzde, akıllı kilit sistemleri ev ve iş yeri güvenliğinde giderek daha popüler hale gelmektedir. Peki akıllı kilit nedir ve evinize uygun mu?
 
 ## Akıllı Kilit Nedir?

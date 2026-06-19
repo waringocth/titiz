@@ -118,7 +118,7 @@ export default function HakkimizdaPage() {
             <div className="relative">
               <div className="relative h-96 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                  src="/images/hakkimizda.jpg"
                   alt="Titiz Çilingir ekibi"
                   fill
                   className="object-cover"

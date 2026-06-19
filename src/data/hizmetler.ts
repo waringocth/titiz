@@ -46,8 +46,7 @@ Ortalama 15-20 dakika içinde adresinize ulaşan uzman çilingirlerimiz, kapı a
           "Esenyurt, Beylikdüzü, Avcılar, Büyükçekmece ve Bahçeşehir ilçelerinde ve tüm mahallelerinde hizmet veriyoruz.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/images/kapi-acma.jpg",
   },
   {
     slug: "kasa-acma",
@@ -96,8 +95,7 @@ Marka ve model bağımsız olarak Çuhadaroğlu, Müller, Hartmann, First Alert 
           "Güvenliğiniz için mülkiyet belgesi veya kimlik ibrazı talep edebiliyoruz. Bu uygulama sizin güvenliğiniz içindir.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800&q=80",
+    image: "/images/kasa-acma.jpg",
   },
   {
     slug: "oto-kapi-acma",
@@ -146,8 +144,7 @@ Anahtar kopyalama, uzaktan kumanda programlama ve yedek anahtar yapma hizmetleri
           "Evet! 7/24 oto çilingir hizmeti sunuyoruz. Gece, hafta sonu ve resmi tatiller dahil.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+    image: "/images/oto-kapi-acma.jpg",
   },
   {
     slug: "kilit-degisimi",
@@ -196,8 +193,7 @@ Mul-T-Lock, Kale, Iseo, Dorma, Abloy ve diğer güvenilir marka kilitleri temin 
           "Randevusuz hizmet veriyoruz. Bizi arayın, uygun saati belirleyelim ve ekibimiz adresinize gelsin.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/images/kapi-acma.jpg",
   },
   {
     slug: "anahtar-kopyalama",
@@ -246,8 +242,7 @@ Anahtarınızın kopyasını çıkarmak için bizi arayın, en kısa sürede hiz
           "Çoğu durumda evet. Ancak bazı güvenlik anahtarları için sertifika ve kimlik belgesi de gerekebilir.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=80",
+    image: "/images/anahtar-kopyalama.jpg",
   },
   {
     slug: "elektronik-kilit",
@@ -296,8 +291,7 @@ Elektronik kilit sistemleri; şifre, kart, parmak izi veya akıllı telefon uygu
           "Pil ile çalışan akıllı kilitler elektrik kesintisinden etkilenmez. Pil destekli olmayan sistemlerde mekanik yedek kilit devreye girer.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+    image: "/images/elektronik-kilit.jpg",
   },
   {
     slug: "acil-cilingir",
@@ -346,8 +340,7 @@ Ortalama 15-20 dakika içinde adresinize ulaşan uzman ekibimiz, acil çilingir 
           "Evet! Konutlar kadar iş yerleri, ofisler ve ticari alanlar için de acil çilingir hizmeti sunuyoruz.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1553272725-086100aecf5e?w=800&q=80",
+    image: "/images/acil-cilingir.jpg",
   },
   {
     slug: "kilitli-araba-acma",
@@ -396,7 +389,6 @@ Yaz aylarında evcil hayvan veya çocuğun araç içinde kalması acil bir durum
           "Titiz Çilingir çalışanları güvenlik taramasından geçmiş, güvenilir profesyonellerdir. Eşyalarınız güvendedir.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+    image: "/images/kilitli-araba.jpg",
   },
 ];

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import animationData from "../../../public/Unlocked.json";
+import animationData from "../../../public/kilit-animasyon.json";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
